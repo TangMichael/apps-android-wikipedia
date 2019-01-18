@@ -29,6 +29,7 @@ public final class AccountUtil {
     public static void updateAccount(@Nullable AccountAuthenticatorResponse response,
                                              LoginResult result) {
         if (createAccount(result.getUserName(), result.getPassword())) {
+            System.out.print("ok")
             if (response != null) {
                 Bundle bundle = new Bundle();
                 bundle.putString(AccountManager.KEY_ACCOUNT_NAME, result.getUserName());
